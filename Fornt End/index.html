@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+
+    <!--load-->
+    <div class="stage">
+        <div class="campfire">
+          <div class="sparks">
+            <div class="spark"></div>
+            <div class="spark"></div>
+            <div class="spark"></div>
+            <div class="spark"></div>
+            <div class="spark"></div>
+            <div class="spark"></div>
+            <div class="spark"></div>
+            <div class="spark"></div>
+          </div>
+          <div class="logs">
+            <div class="log">
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+            </div>
+            <div class="log">
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+            </div>
+            <div class="log">
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+            </div>
+            <div class="log">
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+            </div>
+            <div class="log">
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+            </div>
+            <div class="log">
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+            </div>
+            <div class="log">
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+              <div class="streak"></div>
+            </div>
+          </div>
+          <div class="sticks">
+            <div class="stick"></div>
+            <div class="stick"></div>
+            <div class="stick"></div>
+            <div class="stick"></div>
+          </div>
+          <div class="fire">
+            <div class="fire__red">
+              <div class="flame"></div>
+              <div class="flame"></div>
+              <div class="flame"></div>
+              <div class="flame"></div>
+              <div class="flame"></div>
+              <div class="flame"></div>
+              <div class="flame"></div>
+            </div>
+            <div class="fire__orange">
+              <div class="flame"></div>
+              <div class="flame"></div>
+              <div class="flame"></div>
+              <div class="flame"></div>
+              <div class="flame"></div>
+              <div class="flame"></div>
+              <div class="flame"></div>
+            </div>
+            <div class="fire__yellow">
+              <div class="flame"></div>
+              <div class="flame"></div>
+              <div class="flame"></div>
+              <div class="flame"></div>
+              <div class="flame"></div>
+            </div>
+            <div class="fire__white">
+              <div class="flame"></div>
+              <div class="flame"></div>
+              <div class="flame"></div>
+              <div class="flame"></div>
+              <div class="flame"></div>
+              <div class="flame"></div>
+              <div class="flame"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+     <!--load-->
+
+    <div id="mainDiv">
+      <div id="myOutPut">
+        <span id="span1" v-html='message1' ></span>   
+        <span id="span2" v-html='message2'></span>
+        <br>
+        <span id="span3" v-html='message3'></span>
+        <span id="span4" v-html='message4'></span>
+      </div>
+        <ul id="ul" >
+          <li ></li>
+            <button v-for="is in i"  class="glow-on-hover " :id="is" v-html="row0()" @click="buttonRow0(is)" ></button>
+          </li>
+          <li >
+            <button v-for="is in j" class="glow-on-hover " :id="is" v-html="row1()" @click="buttonRow1(is)"></button>
+          </li>
+          <li >
+            <button v-for="is in k" class="glow-on-hover " :id="is" v-html="row2()" @click="buttonRow2(is)"></button>
+          </li>
+          <li >
+            <button v-for="is in l" class="glow-on-hover " :id="is" v-html="row3()" @click="buttonRow3(is)"></button>
+          </li>
+          <li >
+            <button v-for="is in m" class="glow-on-hover " :id="is" v-html="row4()" @click="buttonRow4(is)"></button>
+          </li>
+          <li >
+            <button v-for="is in n" class="glow-on-hover " :id="is" v-html="row5()" @click="buttonRow5(is)"></button>
+          </li>
+        </ul>
+    </div>
+   
+    <script src="myVue.js"></script>
+</body>
+</html>
